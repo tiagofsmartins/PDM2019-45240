@@ -2,10 +2,8 @@ package org.isel.pdm
 
 import android.content.Context
 import android.graphics.Canvas
-import android.os.Parcelable
 import android.util.AttributeSet
 import android.view.MotionEvent
-import android.view.PointerIcon
 import android.view.View
 
 class SketcherView(ctx:Context, attrs:AttributeSet? = null): View(ctx, attrs) {
@@ -39,12 +37,14 @@ class SketcherView(ctx:Context, attrs:AttributeSet? = null): View(ctx, attrs) {
         return true
     }
 
+
     /*
     override fun onSaveInstanceState(): Parcelable? {
     }
-
     override fun onRestoreInstanceState(state: Parcelable?) {
         super.onRestoreInstanceState(state)
     }
     */
+
 }
+

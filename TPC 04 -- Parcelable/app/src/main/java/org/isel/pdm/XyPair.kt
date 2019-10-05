@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import java.io.Serializable
 
-class XyPair (val x: Float, val y: Float) : Serializable, Parcelable {
+class XyPair (val x: Float, val y: Float) : Serializable , Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readFloat(),
         parcel.readFloat()

@@ -17,13 +17,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putSerializable(SKETCHER_STATE, sketcher.state)
+        //outState.putSerializable(SKETCHER_STATE, sketcher.state)
+        outState.putParcelableArray(SKETCHER_STATE, sketcher.state)
     }
 
     override fun onRestoreInstanceState(src: Bundle) {
         super.onRestoreInstanceState(src)
-        sketcher.state = src.getSerializable(SKETCHER_STATE) as Array<Line>
+        //sketcher.state = src.getSerializable(SKETCHER_STATE) as Array<Line>
+        sketcher.state = src.getParcelableArray(SKETCHER_STATE) as Array<Line>
     }
+
+
+
 }
